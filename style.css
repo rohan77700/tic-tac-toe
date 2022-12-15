@@ -1,13 +1,17 @@
 :root {
     --primary-black: #000;
     --primary-white: #fff;
-    --primary-red: #ff6464;
-    --primary-green: #32aa32;
+    --primary-red: #ff5050;
 }
 
 @font-face {
     font-family: Osake;
     src: url(/assets/Osake-x3oqj.otf);
+}
+
+@font-face {
+    font-family: Typewriter;
+    src: url(/assets/AachenTypewriter-qZnMr.ttf);
 }
 
 * {
@@ -38,27 +42,152 @@ header {
 .header-container h1 {
     margin: auto;
     font-family: Osake;
+    transition: all 1s;
 }
 
 .header-container h1:hover {
-    text-decoration: 1.7px line-through;
+    text-decoration: 1.7px line-through var(--primary-red);
+    letter-spacing: 2px;
     transform: scale(1.5);
 }
 
 
 /* main */
 
+main {
+    grid-area: main;
+}
+
+.homeScreen {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
 
+/* card */
+
+.card-container {
+    display: flex;
+    padding: 10px;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 450px;
+    border-radius: 30px 30px;
+    box-shadow: 0px 0px 10px 2px rgba(122, 122, 122, 0.149);
+    color: var(--primary-white);
+    user-select: none;
+    overflow: hidden;
+    transition: all 1s;
+    animation: size 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.155);
+}
+
+.top {
+    height: 50px;
+    text-align: center;
+    color: var(--primary-black);
+    border-radius: 30px 30px 0 0;
+    font-size: 50px;
+    font-family: Typewriter;
+    transition: all 1s;
+}
+
+.top:hover {
+    color: var(--primary-red);
+}
+
+.avatar img {
+    width: 350px;
+    height: 350px;
+}
+
+/*  */
+
+.bottom {
+    display: flex;
+    height: 50px;
+}
+
+.choose {
+    font-family: Typewriter;
+    font-size: 30px;
+    color: var(--primary-black);
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: center;
+    height: 50px;
+    transition: width, font-size, box-shadow;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.choose:hover {
+    width: 300px;
+    color: var(--primary-red);
+    box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.089), 0 0 10px 5px rgba(0, 0, 0, 0.233);
+    font-size: 40px;
+} 
+
+
+/* VS sign */
+
+.vs {
+    user-select: none;
+    font-size: 7em;
+    font-weight: 500;
+    font-family: Osake;
+    animation: vs 1s 1s;
+    animation-fill-mode: both;
+}
+
+.start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.startGame {
+    /* display: none; */
+    border: none;
+    font-size: 1.5em;
+    font-family: Typewriter;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 10px 20px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.096);
+    transition: transform 1s;
+    animation: appearButton 1s;
+    animation-fill-mode: forwards;
+}
+
+.startGame:hover {
+    transform: scale(1.4);
+}
 
 /* footer */
 
 footer {
-    margin-top: 563px;
+    margin-top: 65px;
     padding: 30px;
     text-align: center;
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Typewriter;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
