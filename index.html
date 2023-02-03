@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.png">
+
+</head>
+<body>
+
+    <main>
+
+        <div class='homeScreen'>
+
+            <div class='cardContainer'>
+
+                <div class='card'>
+
+                    <div class='cardTop'>X</div>
+                    <div class='cardAvatar'>
+                        <img src="https://media3.giphy.com/media/l41lGnxllmN3YqOyI/giphy.gif?cid=790b76113368c4979810fb9937cd32fde75df57029a73d06&rid=giphy.gif&ct=g" id='img1'>
+                    </div>
+            
+                    <div class='cardBottom'>
+                        <span class='playerOrBot player' id='player1'>Player</span>
+                        <span class='playerOrBot bot' id='bot1'>Bot</span>    
+                    </div>
+                    
+                </div>
+
+                <div class='startContainer'>
+                    <button class='startGame'>Start Game</button>
+                </div>
+           
+
+                <div class='card'>
+
+                    <div class='cardTop'>O</div>
+                    <div class='cardAvatar'>
+                        <img src="https://media1.giphy.com/media/xT77XUw1XMVGIxgove/giphy.gif?cid=790b7611a983627e3fcc436e051819772699d42fccc66822&rid=giphy.gif&ct=g" id='img2'>
+                    </div>
+            
+                    <div class='cardBottom' >
+                        <span class='playerOrBot player' id='player2'>Player</span>
+                        <span class='playerOrBot bot' id='bot2'>Bot</span>    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class='gameScreen'>
+
+            <div class="gameReturn">
+                <button class='returnHome'>Return</button>   
+            </div>
+
+            <div class='thePlayer'>
+                <span class='xoxoxo one'>
+                    <span class='name1'></span>
+                    <span class='score1'>0</span>
+                </span>
+                <span class='xoxoxo two'>
+                    <span class='name2'></span>
+                    <span class='score2'>0</span>
+                </span>
+            </div>              
+
+            <div class='board'>
+                <div class='gameBoard'>
+                    <div class='gameCard'data-index='0'></div>
+                    <div class='gameCard'data-index='1'></div>
+                    <div class='gameCard'data-index='2'></div>
+                    <div class='gameCard'data-index='3'></div>
+                    <div class='gameCard'data-index='4'></div>
+                    <div class='gameCard'data-index='5'></div>
+                    <div class='gameCard'data-index='6'></div>
+                    <div class='gameCard'data-index='7'></div>
+                    <div class='gameCard'data-index='8'></div>
+                </div>
+            </div>
+            
+            <div class='roundWrapper'>
+                <div class='xoxoxo round'>
+                    <span class='roundText'>Round</span> 
+                    <span class='roundNumber'>1</span>            
+                </div>
+            </div>
+       
+        </div>
+
+    </main>
+
+    <br>
+
+    <footer>
+        <p>&copy; Created by Ro Han</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
